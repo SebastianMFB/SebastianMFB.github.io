@@ -1,9 +1,8 @@
 img{
-    width: 223px;
+    width: 232px;
     height: auto;
     border-radius: 50%;
-    margin-left:9.5px;
-    margin-top:9px;
+    margin-left: 5px;
     overflow:hidden;
     position:relative;
 }
@@ -36,7 +35,7 @@ img{
 .nameWrapper{
     text-align:center;
     color:white;
-    font-size:34px;
+    font-size:35px;
     font-weight:lighter;
     font-family:Georgia;
     /* text-decoration: underline; */
