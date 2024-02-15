@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <title style="font-size:48px">Research @ Northwestern University</title>
+    <link rel="stylesheet" href="SMBHB.css">
+    <script src="../Main.js"></script>
+  </head>
+  <body style="background-image:url('../Photos/JWST5.png');background-size:cover;">
+    <div id="hubWrapper">
+      <a href="../index.html"><div class="hubsubWrapper">Home Page</div></a>
+      <a href="../SMBHB/SMBHB.html"><div class="hubsubWrapper" style="color:red;">Research @<br>Northwestern University</div></a>
+      <a href="../RubinRoman/RubinRoman.html"><div class="hubsubWrapper">Research @ UW-Madison</div></a>
+      <a href="../Skills/Skills.html"><div class="hubsubWrapper">Skills Summary</div></a>
+      <a href="../AboutMe/AboutMe.html"><div class="hubsubWrapper">About Me</div></a>
+      <a href="../Journey/Journey.html"><div class="hubsubWrapper">My Journey</div></a>
+
+    </div>
+    <div class="titleWrapper">
+      <h1>Supermassive Black Hole Binaries:</h1>
+      <h2>Bayesian Search for Quasars with Periodicity<br> in Zwicky Transient Facility</h2>
+      <h4>With <a href="https://caitlinawitt.github.io/" style="color:red;text-decoration:none;">Dr. Caitlin Witt</a> in Prof. Adam Miller's<br>Time Domain Research Group @ Northwestern University</h4>
+    </div>
+
+    <div class="navWrapper">
+        <a href="#Back" style="color:white;text-decoration: none;"><div class="navsubWrapper">Project Background</div></a>
+        <a href="#Results" style="color:white;text-decoration: none;"><div class="navsubWrapper">Results</div></a>
+        <a href="#Next" style="color:white;text-decoration:none;"><div class="navsubWrapper">Next Steps</div></a>
+    </div>
+
+    <div class="main-content" id="Back">
+      <h2>Project Background/Intro</h2>
+      <p>
+        As part of the CIERA REU program, I worked in Professor Adam Miller's Time Domain group with Dr. Caitlin Witt (Check out her amazing paper on this topic <a href="https://arxiv.org/pdf/2110.07465.pdf" style="text-decoration: none;color:red;">HERE!</a>) to develop a pipeline which employs <a href="https://www.analyticsvidhya.com/blog/2016/06/bayesian-statistics-beginners-simple-english/#What_Is_Bayesian_Statistics?" style="color:orange;">Bayesian Statistics</a> to search for Supermassive Black Hole Binaries by identifying Quasars with Periodic Variability.<br><br>
+          
+        <b>In simpler words, <a href="https://en.wikipedia.org/wiki/Supermassive_black_hole" style="color:orange;">Supermassive Black Holes</a>, or their Quasar counterparts (The burning hot disk around the Black Hole), are extremely far away from us, and as such are too small to directly image with a telescope. So, to find them, we stare into the cores of galaxies for years at a time. If we notice a consistent, periodic brightening and dimming, we believe this is evidence that we are looking at a Supemassive Black Hole Binary. This periodic brightening and dimming (periodic variability) is a result of a phenomenon of <a href="https://en.wikipedia.org/wiki/Relativistic_beaming" style="color:orange;">Relativistic Beaming</a></b><br><br>
+        <!-- , where a shining object that is moving close to the speed of light will appear brighter or dimmer than normal depending on if it is moving toward or away from us. -->
+            To find these objects, we use a sampler. We give our sampler two things:<br><br>
+          
+        1) A light curve (an object's brightness over time) and <br>
+        2) Two models which the sampler will try to fit to our light curve.<br>
+            
+        <img src="../Photos/DRWCW Model.png" style="display:block;width:90%;margin-left:5%;margin-top:30px"><br>
+        The first model (Left), called a Damped Random Walk, is used to model a singular Supermassive Black Hole light cuve--the brightness over time we'd expect to see from one of these objects. The second model (Right in green) is used to model a Supermassive Black Hole <b>Binary</b>--it uses the previous model, but adds some periodic variability to account for the Relativistic Beaming which happens in the orbit.<br><br>
+        The sampler will then give us a number which tells us which model it thinks fits the light curve better--this is called a &Delta;BIC. If &Delta;BIC = 0, then the sampler is indifferent--it doesn't prefer either model more than the other. If &Delta;BIC << 0, however, our sampler strongly believes the light curve we gave it was produced by the second model. That is, it believes the object which produced that light curve is a Supermassive Black Hole Binary!<br><br>
+            
+        Getting this &Delta;BIC rating is the way we confirm whether or not we have found a Supermassive Black Hole Binary. For most of the summer, I have been working on validating the pipeline; that is, making sure the code is working as best as possible.<br><br>
+        <!-- that is, simulating a bunch of light curves using one of the models and then seeing which model the sampler chooses. If the sampler very consistenlty chooses the model we used, then we say the pipeline is validated.  -->
+            
+        Thanks to extensive work throughout the final week of the program, we have validated the pipeline to our standards, and in the past couple days, we have begun applying the pipeline to real light curve data and embarked on our <b>journey through the universe to find Supermassive Black Hole Binaries!</b>
+      </p>
+    </div>
+        
+    <div id="Results" class="main-content">
+      <h2>Results (So far!)</h2>
+      <p>
+        In a <a href="https://arxiv.org/pdf/2206.11497.pdf" style="text-decoration:none;color:red">previous paper (Chen et al.)</a> a group created a model similar to the pipeline we've created, and published a sample of 127 objects which their model predicts are periodic quasars, or Supermassive Black Hole Binaries.<br><br>
+        Below are 4 light curve plots (brightness over time) of 2 objects, SDSSJ002815.26+201420.8 and SDSSJ004744.03+190338.5. The first two plots are the light curves and analyses performed on these objects by the Chen et al. and the second two plots are analyses we have performed on these objects with our pipeline. We and the Chen et al. group use different samplers (emcee vs. ultranest) and our analysis includes an additional ~year of data.<br><br>
+        <img src="../Photos/SDSSJ002815.26+201420.8Chen.png" style="width:49%;height:width;">
+        <img src="../Photos/SDSSJ004744.03+190338.5Chen.png" style="width:49%;height:width;"><br>
+        <img src="../Photos/SDSSJ002815.26+201420.8LC.png" style="width:49%;height:width;">
+        <img src="../Photos/SDSSJ004744.03+190338.5LC.png" style="width:49%;height:width;"><br><br>
+        <cap>Plots of two objects' light curves (Brightness over time). Blue data points are observations from the <a href="https://www.ztf.caltech.edu/about-ztf.html" style="text-decoration: none;color:orangered;">Zwicky Transient Facility</a>. Dashed black line is the underlying periodic signal which our pipeline believes it found. The &Delta;BIC tells us how strongly the pipeline believes this light curve was generated by a Supermassive Black Hole Binary. <b>Due to the small &Delta;BIC of -18 << -10, our pipeline has strong evidence that object SDSS J002815.26+201420.8 is a Supermassive Black Hole Binary</b>
+        </cap><br><br>
+        While these results are interesting, in order to interpret them with full context, we need to apply the pipeline to many light curves. The SDSS J002815.26+201420.8 object with a strong &Delta;BIC may be a very unique occurrence or a common finding with our pipeline. We'll be moving forwarrd, applying the pipeline to even more light curves to get some answers soon. Any new results will be posted here!
+
+      </p>
+      <!-- As of publishing this website, we have only applied the pipeline to 4 real light curves. Out of these four light curves, we have  -->
+    </div>
+    <div id="Learned" class="main-content">
+      <h2>What I've Learned</h2>
+      <p>This program has been one of the best opportunities I have ever participated in. From the incredible leadership from my advisor Dr. Caitlin Witt, to the plethora of coding workshops, to the presentation and networking opportunities, the CIERA REU has equipped me with all the tools I need to make a decision on my future and succeed in whatever I choose.<br><br>
+      Though I have worked with python for a little over a year now, my work this summer has helped me improve my coding skills by orders of magnitude. I've become intimately familiar with command line and have spent weeks working with Quest, a High Performance Computing Cluster, in order to handle massive data sets. I've improved my ability to simulate and interpret data with new packages and visualizations in python. Most notably, I worked with Bayesian Statistics in the form of the ultranest package Reactive Nested Sampler and have plotted myriad results with the matplotlib library--a researchers favorite tool.<br><br>
+      More important than experience with any specific package, however, I have gained priceless experience in using my creativity to analyze and experiment with pre-existing code and to problem-solve through any adversity this brings. Working with Bayesian Statistics code which analyzes Supermassive Black Hole Quasar Light Curves with a Postdoc who works with NANOGrav is such a unique and niche opportunity which I have been fortunate to earn, however the experience I've gained will help me no matter what I choose to pursue in the future.
+      </p>
+    </div>
+    <div id="Next" class="main-content">
+      <h2>Next Steps</h2>
+      <p>
+        ....
+      </p>
+    </div>
+    <div class="sub-content">
+      <h3>Acknowledgements</h3>
+      <p1>
+        This material is based upon work supported by the National Science Foundation under grant No. AST 2149425, a Research Experiences for Undergraduates (REU) grant awarded to CIERA at Northwestern University. Any opinions, findings, and conclusions or recommendations expressed in this material a re those of the author(s) and do not necessarily reflect the views of the National Science Foundation. This research was supported in part through the computational resources and staff contributions provided for the Quest high performance computing facility at Northwestern University which is jointly supported by the Office of the Provost, the Office for Research, and Northwestern University Information Technology.
+      </p1>
+    </div>
+  <div class="bottom-space"><p>Background Image Credit: James Webb Space Telescope</p></div>
+  </body>
