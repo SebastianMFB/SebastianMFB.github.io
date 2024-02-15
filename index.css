@@ -1,0 +1,249 @@
+img{
+    width: 223px;
+    height: auto;
+    border-radius: 50%;
+    margin-left:9.5px;
+    margin-top:9px;
+    overflow:hidden;
+    position:relative;
+}
+
+.circular--portrait img {
+    width: 100%;
+    height: auto;
+}
+
+/* MAYBE MAKE THE SIDEBAR A DROPDOWN... Hmm... maybe idk cuz the sidebar is just the description so it's nice to always have. */
+.sidebarWrapper{
+    display:inline-block;
+    /* background-color:rgba(135,100,255,.66); */
+    background-color:rgba(200,0,0,.44);
+    /* try rgb(100,60,30) orange which matches background OR a light purple...135,108,255,.66! Really nice */
+    height:100%;
+    width:355px;
+    opacity:85%;
+
+}
+.portraitWrapper{
+    background-color: white;
+    width:242px;
+    height:281px;
+    margin-top:30px;
+    margin-left:56.5px;
+    border-radius: 50%;
+    /* filter:blur(10px); */
+}
+.nameWrapper{
+    text-align:center;
+    color:white;
+    font-size:40px;
+    font-weight:lighter;
+    font-family:Georgia;
+    /* text-decoration: underline; */
+    margin-top:30px;
+}
+
+.nameDescWrapper{
+    text-align:center;
+    color:white;
+    font-size:18px;
+    font-weight:lighter;
+    font-family:'calibri',sans-serif;
+    padding:10%;
+    padding-top:5%;
+}
+
+.subtitleWrapper1{
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    text-align:center;
+    color:white;
+    font-size:26px;
+    font-family:'calibri',sans-serif;
+    font-weight:lighter;
+    background:none;
+    border: solid 1.5px white;
+    border-radius:50%;
+    width:250px;
+    height:250px;
+    position:absolute;
+    top:325px;
+    left:450px;
+    transition:.3s;
+}
+
+.subtitleWrapper1:hover{
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    text-align:center;
+    color:white;
+    background:linear-gradient(30deg,rgba(144, 0, 247, 0.2),rgba(0, 0, 0, 0.4) 100%);
+    font-size:28px;
+    font-family:'calibri',sans-serif;
+    font-weight:lighter;
+    border: solid 2px black;
+    border-radius:50%;
+    width:275px;
+    height:275px;
+    position:absolute;
+    top:312.5px;
+    left:437.5px;
+}
+
+.subtitleWrapper2{
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    text-align:center;
+    color:white;
+    font-size:26px;
+    font-family:'calibri',sans-serif;
+    font-weight:lighter;
+    background:none;
+    border: solid 1.5px white;
+    border-radius:50%;
+    width:250px;
+    height:250px;
+    position:absolute;
+    top:70px;
+    left:650px;
+    transition:.3s;
+}
+
+.subtitleWrapper2:hover{
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    text-align:center;
+    color:white;
+    background:linear-gradient(189deg,rgba(255,255,255,.4),rgba(255, 0, 0, 0.4) 60%);
+    font-size:28px;
+    font-family:'calibri',sans-serif;
+    font-weight:lighter;
+    border: solid 2px black;
+    border-radius:50%;
+    width:275px;
+    height:275px;
+    position:absolute;
+    top:57.5px;
+    left:637.5px;
+}
+
+.subtitleWrapper3{
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    text-align:center;
+    color:white;
+    background-color:rgb(255, 255, 255,.4);
+    font-size:26px;
+    font-family:'calibri',sans-serif;
+    font-weight:lighter;
+    background:none;
+    border: solid 1.5px white;
+    border-radius:50%;
+    width:250px;
+    height:250px;
+    position:absolute;
+    top:375px;
+    left:800px;
+    transition:.3s;
+}
+
+.subtitleWrapper3:hover{
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    text-align:center;
+    color:black;
+    background: linear-gradient(217deg,rgba(189, 74, 177, 0.4) 25%,rgba(0, 60, 255, 0.4),rgba(19, 84, 20, 0.4)75%);
+    font-size:28px;
+    font-family:'calibri',sans-serif;
+    font-weight:lighter;
+    border: solid 2px black;
+    border-radius:50%;
+    width:275px;
+    height:275px;
+    position:absolute;
+    top:362.5px;
+    left:787.5px;
+}
+
+.subtitleWrapper4{
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    text-align:center;
+    color:white;
+    font-size:26px;
+    font-family:'calibri',sans-serif;
+    font-weight:lighter;
+    border: solid 1.5px white;
+    border-radius:50%;
+    width:250px;
+    height:250px;
+    position:absolute;
+    top:50px;
+    left:950px;
+    transition:.3s;
+}
+
+.subtitleWrapper4:hover{
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    text-align:center;
+    color:black;
+    background:linear-gradient(157deg,rgba(255, 0, 0, 0.4),rgba(255, 196, 0, 0.4) 70%);
+    font-size:28px;
+    font-family:'calibri',sans-serif;
+    font-weight:lighter;
+    border: solid 2px black;
+    border-radius:50%;
+    width:275px;
+    height:275px;
+    position:absolute;
+    top:37.5px;
+    left:937.5px;
+}
+
+.subtitleWrapper5{
+    display:flex;
+    text-align:right;
+    align-items:center;
+    justify-content:space-around;
+    color:white;
+    font-size:26px;
+    font-family:'calibri',sans-serif;
+    font-weight:lighter;
+    background:none;
+    border: solid 1.5px white;
+    border-radius:50%;
+    width:250px;
+    height:250px;
+    position:absolute;
+    top:350px;
+    left:1125px;
+    transition:.3s;
+}
+
+.subtitleWrapper5:hover{
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    text-align:center;
+    color:black;
+    background:linear-gradient(19deg,rgba(255,0,0,.4),rgba(46, 161, 255, 0.4)60%);
+    font-size:28px;
+    font-family:'calibri',sans-serif;
+    font-weight:lighter;
+    border: solid 2px black;
+    border-radius:50%;
+    width:275px;
+    height:275px;
+    position:absolute;
+    top:337.5px;
+    left:1112.5px;
+}
