@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title style="font-size:48px">Research @ UW-Madison</title>
+    <link rel="stylesheet" href="RubinRoman.css">
+    <script src="../Main.js"></script>
+  </head>
+  <body style="background-image:url('../Photos/Cluster.jpg');background-size:cover;">
+    
+    <div id="hubWrapper">
+      <a href="../index.html"><div class="hubsubWrapper">Home Page</div></a>
+      <a href="../SMBHB/SMBHB.html"><div class="hubsubWrapper">Research @<br>Northwestern University</div></a>
+      <a href="RubinRoman.html"><div class="hubsubWrapper" style="color:red;text-decoration: none;">Research @ UW-Madison</div>
+      <a href="../Skills/Skills.html"><div class="hubsubWrapper">Skills Summary</div></a>
+      <a href="../AboutMe/AboutMe.html"><div class="hubsubWrapper">About Me</div></a>
+      <a href="../Journey/Journey.html"><div class="hubsubWrapper">My Journey</div></a>
+    </div>
+
+    <div class="titleWrapper">
+      <h1>Rubin + Roman:</h1>
+      <h2>Combining Rubin Observatory and Roman Space Telescope in Overlapping Sky Survey</h2>
+      <h4>With <a href="https://www.physics.wisc.edu/directory/bechtol-keith/" style="color:blue;text-decoration:none;">Prof. Keith Bechtol</a> in his<br>Cosmology Research Group @ University of Wisconsin-Madison</h4>
+    </div>
+
+    <div class="navWrapper">
+      <a href="#Back" style="color:white;text-decoration: none;"><div class="navsubWrapper">Project Background</div></a>
+        <a href="#Results" style="color:white;text-decoration: none;"><div class="navsubWrapper">Results</div></a>
+        <a href="#Next" style="color:white;text-decoration:none;"><div class="navsubWrapper">Next Steps</div></a>
+    </div>
+
+    <div class="main-content" id="Back">
+      <h2>Project Background/Intro</h2>
+      <p>
+        In the fall of 2022, I joined Prof. Keith Bechtol's research group with an interest in using new tools for Cosmic probes of Dark Matter to constrain Cosmological Models. He introduced the idea of a project based on <a href="https://arxiv.org/abs/2209.06829" style="color:orange;text-decoration:none;">a paper from Troxel et al.</a>which presents and validates 20 deg^2 of overlapping synthetic imaging surveys which represent the full depth of the <a href="https://roman.gsfc.nasa.gov/" style="color:orange;text-decoration:none;">Nancy Grace Roman Space Telescope</a> High-Latitude Imaging Survey (HLIS) and five years of observations from the brand new<a href="https://www.lsst.org/" style="color:orange;text-decoration:none;">Vera C. Rubin Observatory</a> Legacy Survey of Space and Time (LSST).
+      </p>
+
+        <!-- <div class="RubinRomanWrapper"><img src="../Photos/Rubin.jpeg" width="40%" style="margin-left:5%;"><img src="../Photos/Roman.jpeg" width="40%" style="margin-left:10%;align-items:center;"></div> -->
+      <p>
+        The Rubin Observatory LSST provides an opportunity to identify from the ground an unprecedented amount of objects to an extraordinary depth in 6 optical/IR bands (ugrizy). The Roman Space Telescope HLIS, on the other hand, offers excellent space-based angular resolution in IR bands (y104, j129, h158, f184). Combining the fine resolution of Roman with the depth and magnitude of Rubin offers unique opportunities to improve galaxy-star classification and properly identify nearby, ultra-diffuse objects. Building a high-purity sample of these objects allows us to probe how Dark Matter (DM) aggregates in "sub-halos"—small aggregations of dark matter which are predicted to occur around large DM halos like that of the Milky Way. This helps us develop near-field cosmology and constrain DM properties in a unique way unachievable by either survey alone. 
+      </p>
+    </div>
+        
+    <div id="Results" class="main-content">
+      <h2>Results and Outcomes</h2>
+      <p>
+        Using simulated data from the Dark Energy Survey Collaboration, we calibrate the expected observations from Rubin and Roman and perform an anlysis of improvements to galaxy-star classification we expect to see when combining the two plots. Below follows a summary of the findings, which can also be found in my research professor, Keith Bechtol's <a href="https://asd.gsfc.nasa.gov/roman/wps_2023/files/016_Bechtol_HLWAS.pdf" style="color:orange;text-decoration:none;">NASA White Paper</a> advocating for the coordination and Rubin and Roman.<br><br>
+
+        <img src="../Photos/RubinRomanSGSep1.png" style="width:60%;height:width;"><br><br>
+
+        This figure depicts plots of object apparent size vs. apparent magnitude for both Roman and Rubin. In blue are simulated stars, and in red simulated galaxies.
+
+        As we discussed, Roman offers a marked improvement to angular resolution. Whereas the distribution of apparent sizes created by Rubin has significant overlap between stars and galaxies, Roman properly identifies that the apparent size of stars commonly exceeds that of galaxies (Shown in the separation on the right hand side between the red bar and the blue triangle). The clear division between classes in the Roman size vs. mag plot hints at simple and accurate star-galaxy classification enabled by its improved resolution.
+        
+        <!-- Talk about machine learning classification? -->
+      </p>
+    </div>
+
+    <div id="Next" class="main-content">
+      <h2>Next Steps</h2>
+      <p>
+        Graduate student, Peter Ferguson, and I are attempting to harness Machine Learning to correctly classify nearby ultra-dim objects and distant, spatially extended objects.
+      </p>
+    </div>
+    <div class="bottom-space"><p>Background Image Credit: Hubble</p></div>
+  </body>
+</html>
