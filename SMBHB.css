@@ -60,16 +60,22 @@ h4{
 }
 
 h5{
-    color:white;
     font-family: 'calibri',sans-serif;
     font-size:2vw;
-    font-weight:lighter;
-    text-align:right;
+    color: white;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1vw;
+    margin-left: 20px;
+    margin-right: 20px;
+    word-spacing: 4px;
+/*     
     display:flex;
     align-items:flex-end;
     position:relative;
     top:90%;
-    left:1%;
+    left:1%; */
 }
 
 p{
