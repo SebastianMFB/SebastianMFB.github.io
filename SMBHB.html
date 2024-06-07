@@ -30,22 +30,34 @@
       <h2>Project Background/Intro</h2>
       <p>
         As part of the CIERA REU program, I worked in Professor Adam Miller's Time Domain group with Dr. Caitlin Witt (Check out her amazing paper on this topic <a href="https://arxiv.org/pdf/2110.07465.pdf" style="text-decoration: none;color:red;">HERE!</a>) to develop a pipeline which employs <a href="https://www.analyticsvidhya.com/blog/2016/06/bayesian-statistics-beginners-simple-english/#What_Is_Bayesian_Statistics?" style="color:orange;">Bayesian Statistics</a> to search for Supermassive Black Hole Binaries by identifying Quasars with Periodic Variability.<br><br>
-          
-        <b>In simpler words, <a href="https://en.wikipedia.org/wiki/Supermassive_black_hole" style="color:orange;">Supermassive Black Holes</a>, or their Quasar counterparts (The burning hot disk around the Black Hole), are extremely far away from us, and as such are too small to directly image with a telescope. So, to find them, we stare into the cores of galaxies for years at a time. If we notice a consistent, periodic brightening and dimming, we believe this is evidence that we are looking at a Supemassive Black Hole Binary. This periodic brightening and dimming (periodic variability) is a result of a phenomenon of <a href="https://en.wikipedia.org/wiki/Relativistic_beaming" style="color:orange;">Relativistic Beaming</a></b><br><br>
-        <!-- , where a shining object that is moving close to the speed of light will appear brighter or dimmer than normal depending on if it is moving toward or away from us. -->
-            To find these objects, we use a sampler. We give our sampler two things:<br><br>
-          
-        1) A light curve (an object's brightness over time) and <br>
-        2) Two models which the sampler will try to fit to our light curve.<br>
+
+        <h5>What is a Supermassive Black Hole?</h5>
+        There is evidence for the existence of Supermassive Black Holes (SMBHs) at the center of almost every known large (non-dwarf) galaxy. Despite being incredibly small on a galactic scale (about the same size to their host galaxies as a singular atom would be to a human), they exert remarkable influence over their host galaxies. Certain physical SMBH properties have been shown to correlate with properties of their host galaxy--most notably, the M-sigma relationship, among others relating the black hole mass to the galactic bulge mass [reference]. Furthermore, in periods of active accretion, SMBHs are known as Active Galactic Nuclei (AGN): As they shred apart nearby stars and gas clouds, a surrounding hot accretion disk produces immense radiation pressure and, on occasion, sends off jets of hot (T ~ 10^7 K) material at relativistic speeds. This activity, known as AGN feedback, is equally capable of thrusting the star into brief periods of explosive star formation as it is of plunging the galaxy into dark quiescence. Though our knowledge of how they came to be so massive is limited, current research suggests a strong link between their evolution and the surrounding galactic environment.<br><br>
+
+        <h5>What about a Supermassive Black Hole Binary?</h5>
+        We expect Supermassive Black Hole Bianries (SMBHBs) are the inevitable outcomes of SMBH-hosting galaxy mergers. If our theory of <a href="https://ui.adsabs.harvard.edu/abs/2005Natur.435..629S/abstract" style="color:orange;">hierarchical galaxy formation</a> is correct, such mergers play an enormous role in the evolution of galaxies and the entire universe. Needless to say, studying these systems is necessary to understand galactic evolution; and, such extreme environments would serve as multi-messenger laboratories, where electromagnetic (light) and gravitational wave (GW) observations can complementarily probe the system in unprecedented detail.<br><br>
+        
+        <h5>How do we detect a SMBHB?</h5>
+        In extremely close orbits (≤1 milliparsec), we expect SMBHs, at their incredible mass and miniscule separation on the milliparsec scale, would emit detectable GWs at Nanohertz frequency. Following recent evidence for a GW background found by the <a href="https://nanograv.org/" style="color: orange;">NANOgrav coalition</a>, the prospect of locating individual SMBHBs using Pulsar Timing Arrays is of paramount interest. <br><br>
+
+        Of more direct interest to my research, we also expect some close-orbit SMBHB systems to exhibit periodically variable brightness. Whether due to periodic interactions with a circumbinary accretion disk (<a href="https://academic.oup.com/mnras/article/436/4/2997/984794" style="color:orange;">D’Orazio et al. 2013</a>; <a href="https://iopscience.iop.org/article/10.1088/0004-637X/783/2/134" style="color:orange;">Farris et al. 2014</a>) or <a href="https://en.wikipedia.org/wiki/Relativistic_beaming" style="color:orange;">Relativistic Doppler Boosting</a> (), this unique signature offers detection potential <i>given a robust time series analysis pipeline</i>. This is where my research comes in.<br><br>
+
+        <h5>The Search for Periodicity in Quasar Light Curves</h5>
+        Periodic SMBHB systems would exhibit stochastically variable brightness best modeled by a red noise process called the Damped Random Walk (DRW) (<a href="https://iopscience.iop.org/article/10.1088/0004-637X/721/2/1014" style="color:orange;">MacLeod et al. 2010</a>) <i>along with</i> additive sinusoidal variability (Skewed sinusoids can be a product of orbital inclination and ellipticity, but aren't accounted for in this research).<br><br>
             
         <img src="DRWCW Model.png" style="display:block;width:90%;margin-left:5%;margin-top:30px"><br>
-        The first model (Left), called a Damped Random Walk, is used to model a singular Supermassive Black Hole light cuve--the brightness over time we'd expect to see from one of these objects. The second model (Right in green) is used to model a Supermassive Black Hole <b>Binary</b>--it uses the previous model, but adds some periodic variability to account for the Relativistic Beaming which happens in the orbit.<br><br>
-        The sampler will then give us a number which tells us which model it thinks fits the light curve better--this is called a &Delta;BIC. If &Delta;BIC = 0, then the sampler is indifferent--it doesn't prefer either model more than the other. If &Delta;BIC << 0, however, our sampler strongly believes the light curve we gave it was produced by the second model. That is, it believes the object which produced that light curve is a Supermassive Black Hole Binary!<br><br>
-            
-        Getting this &Delta;BIC rating is the way we confirm whether or not we have found a Supermassive Black Hole Binary. For most of the summer, I have been working on validating the pipeline; that is, making sure the code is working as best as possible.<br><br>
-        <!-- that is, simulating a bunch of light curves using one of the models and then seeing which model the sampler chooses. If the sampler very consistenlty chooses the model we used, then we say the pipeline is validated.  -->
-            
-        Thanks to extensive work throughout the final week of the program, we have validated the pipeline to our standards, and in the past couple days, we have begun applying the pipeline to real light curve data and embarked on our <b>journey through the universe to find Supermassive Black Hole Binaries!</b>
+        The DRW model (Left) is used to model a singular SMBH light curve. The DRW+Sine model (Right in green) uses the previous model, but adds periodic variability related to the orbital mechanics of the SMBHB.<br><br>
+
+        To sift through the two signals present and detect evidence for periodicity, we use 3 methods: Lomb Scargle Periodograms (LS), the Weighted Wavelet Z-Transform (WWZ), and a Nested Bayesian Sampler (NBS). My research advisor, Caitlin Witt, published a paper detailing the advantages and challenges of using the NBS to detect periodicity among red noise. My research includes additional granular analyses of the NBS performance and novel evaluation of the other two methods. Future research will involve the use of Machine Learning in combining these three methods and optimizing light curve classification and characterization.<br><br>
+
+        For each method, the procedure is as follows:<br>
+        <ul>
+          <li>Simulate 1000+ light curves--half will be strictly DRW (simulating SMBHs) and the other half will be DRW+Sine (simulating SMBHBs)</li>
+          <li>For a given method (and given survey specifications), run a complete analysis on all light curves</li>
+          <li>Compare output parameters to input simulation parameters. Note: LS and WWZ only carry out periodic searchers, and cannot, with accuracy, estimate parameters of underlying quasar stochastic variability.</li>
+          <li>Gauge model selection for each method, and evaluate binary classification efficacy.</li>
+        </ul>
+      
       </p>
     </div>
         
